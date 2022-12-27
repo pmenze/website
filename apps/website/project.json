@@ -1,0 +1,23 @@
+{
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx astro dev --root apps/website"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx astro build --root apps/website"
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx astro preview --root apps/website"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}
