@@ -1,16 +1,35 @@
 <html>
   <body>
     <div class="mask">
-      <img src="flughafensee.jpg"/>
+      <h1 class="signature centeredText">
+        Willkommen
+      </h1>
+      <img src="flughafensee-klein.jpg" alt="Strand am Flughafensee"/>
     </div>
   </body>
-
+  
   <style>
+    body  {
+      margin: 0;
+      background-color: seagreen;
+    }
     img {
       width: 100%;
       height: auto;
     }
+    .signature {
+      font-family: barokahsignature;
+    }
+    .centeredText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     .mask {
+      position: relative;
+      text-align: center;
+      color: navajowhite;
       mask-image: linear-gradient(
         to bottom,
         rgba(0,0,0,1) 0 75%,
@@ -22,5 +41,10 @@
         rgba(255,255,255,0)
       );
     }
+    @font-face {
+      font-family: barokahsignature;
+      src: url('/fonts/BarokahSignatureRegular-PK15Z.ttf') ;
+    }
+
   </style>
 </html>
