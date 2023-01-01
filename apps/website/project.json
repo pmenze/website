@@ -1,4 +1,5 @@
 {
+  "name": "website",
   "targets": {
     "serve": {
       "executor": "nx:run-commands",

@@ -1,10 +1,19 @@
-<html>
-  <body>
+---
+import { HelloComponent } from '../components/hello.component';
+---
+
+  
+  <html>
+    <body>
+
     <div class="mask">
       <h1 class="signature centeredText">
         Willkommen
       </h1>
       <img src="flughafensee-klein.jpg" alt="Strand am Flughafensee"/>
+    </div>
+    <div class="space">
+      <HelloComponent client:visible />
     </div>
   </body>
   
@@ -13,9 +22,15 @@
       margin: 0;
       background-color: seagreen;
     }
+    HelloComponent {
+      background-color: brown;
+    }
     img {
       width: 100%;
       height: auto;
+    }
+    .space {
+      margin: 1000px 200px;
     }
     .signature {
       font-family: barokahsignature;
