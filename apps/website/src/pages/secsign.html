@@ -1,0 +1,72 @@
+
+<html>
+  <body>
+   
+        <form id="parameters">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="safeAppCode">Safe-App-Code:</label>
+            <input type="text" id="code" name="code"><br><br>
+            <button type="button" onclick="link()">Verknüpfen</button>
+        </form>
+    
+
+        <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+          }
+  
+          #parameters {
+              background-color: #ffffff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+  
+          #parameters label {
+              display: block;
+              margin-bottom: 8px;
+          }
+  
+          #parameters input {
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+          }
+  
+          #parameters button {
+              width: 100%;
+              padding: 10px;
+              background-color: #007bff;
+              color: #ffffff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+  
+          #parameters button:hover {
+              background-color: #0056b3;
+          }
+      </style>
+  </body>
+
+  <script>
+
+    const link = () => {
+        const email = document.getElementById("email").value;
+        const code = document.getElementById("code").value;
+        const url = `com.secsign.heliostest://create?secsignid=${email}&idserverurl=2fa-mobile.patienten.helios-gesundheit.de:443&password=${code}`;
+        window.location.href = url;
+    }
+  </script>
+ 
+</html>

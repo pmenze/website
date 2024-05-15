@@ -25,6 +25,7 @@
     },
     "lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      
     }
   },
   "namedInputs": {
