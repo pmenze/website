@@ -25,7 +25,7 @@
         const prod = document.getElementById("prod").checked;
         const urlScheme = prod ? "com.secsign.helios" : "com.secsign.heliostest";
         const idserverurl = prod ? "2fa-mobile.patienten.helios-gesundheit.de:443" : "2fa-mobile.patienten.helios-gesundheit.de:443";
-        const url = `${urlScheme}://create?secsignid=${email}&idserverurl=${idserverurl}:443&password=${code}`;
+        const url = `${urlScheme}://create?secsignid=${email}&idserverurl=${idserverurl}&password=${code}`;
         window.location.href = url;
     }
   
